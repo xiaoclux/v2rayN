@@ -1,0 +1,22 @@
+{
+  "web.login.title": "Sign in to v2rayN",
+  "web.login.credential": "Password",
+  "web.login.submit": "Sign in",
+  "web.login.failed": "Sign-in failed",
+  "web.logout": "Sign out",
+  "web.status.inbound": "Mixed inbound",
+  "web.status.lan": "LAN",
+  "web.status.noProfile": "No active profile",
+  "web.status.reloading": "Restarting core…",
+  "web.status.delay": "Delay",
+  "web.status.ip": "Outbound IP",
+  "web.events.disconnected": "Live connection lost, reconnecting…",
+  "web.logs.title": "Log",
+  "web.logs.pause": "Pause",
+  "web.logs.resume": "Resume",
+  "web.speed.proxy": "Proxy",
+  "web.speed.direct": "Direct",
+  "web.app.stopping": "The service is stopping",
+  "web.speedtest.menu": "Test",
+  "web.logs.filter": "Filter (plain text)"
+}

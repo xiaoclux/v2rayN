@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>v2rayN.Web</RootNamespace>
+        <AssemblyName>v2rayN.Web</AssemblyName>
+        <!-- Framework-dependent publish for container use; overrides the Release defaults in Directory.Build.props -->
+        <PublishSingleFile>false</PublishSingleFile>
+        <InvariantGlobalization>false</InvariantGlobalization>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="SkiaSharp.NativeAssets.Linux" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\ServiceLib\ServiceLib.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="v2rayN.Web.Tests" />
+    </ItemGroup>
+
+</Project>

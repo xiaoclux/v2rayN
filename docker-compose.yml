@@ -1,0 +1,36 @@
+# Headless v2rayN with web UI.
+#   mkdir -p secrets && printf '%s' '<choose a strong password>' > secrets/web_password.txt
+#   docker compose up -d --build
+# Then open http://<server>:8080. For internet exposure put a TLS reverse proxy (Caddy/Traefik) in front
+# and set V2RAYN_WEB_COOKIE_SECURE=true.
+services:
+  v2rayn:
+    build:
+      context: .
+      args:
+        CORE_SOURCE: bundle
+    image: v2rayn-web:local
+    container_name: v2rayn
+    restart: unless-stopped
+    stop_grace_period: 30s
+    environment:
+      V2RAYN_WEB_PASSWORD_FILE: /run/secrets/v2rayn_web_password
+      # Keeps the core's mixed inbound on the port mapped below.
+      V2RAYN_INBOUND_PORT: "10808"
+      TZ: Asia/Shanghai
+    secrets:
+      - v2rayn_web_password
+    ports:
+      - "8080:8080"
+      # The proxy inbound has no auth by default: published on loopback only. Widen deliberately.
+      - "127.0.0.1:10808:10808"
+    volumes:
+      - v2rayn-data:/data
+    # Alternative: `network_mode: host` (remove `ports`) so http_proxy=http://127.0.0.1:10808 works for any port.
+
+volumes:
+  v2rayn-data:
+
+secrets:
+  v2rayn_web_password:
+    file: ./secrets/web_password.txt

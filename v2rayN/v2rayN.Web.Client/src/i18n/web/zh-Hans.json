@@ -1,0 +1,22 @@
+{
+  "web.login.title": "登录 v2rayN",
+  "web.login.credential": "密码",
+  "web.login.submit": "登录",
+  "web.login.failed": "登录失败",
+  "web.logout": "退出登录",
+  "web.status.inbound": "混合入站",
+  "web.status.lan": "局域网",
+  "web.status.noProfile": "未选择节点",
+  "web.status.reloading": "正在重启内核…",
+  "web.status.delay": "延迟",
+  "web.status.ip": "出口 IP",
+  "web.events.disconnected": "实时连接已断开，正在重连…",
+  "web.logs.title": "日志",
+  "web.logs.pause": "暂停",
+  "web.logs.resume": "继续",
+  "web.speed.proxy": "代理",
+  "web.speed.direct": "直连",
+  "web.app.stopping": "服务正在停止",
+  "web.speedtest.menu": "测试",
+  "web.logs.filter": "过滤（纯文本）"
+}

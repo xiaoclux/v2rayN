@@ -1,0 +1,15 @@
+.git
+.github
+**/bin
+**/obj
+**/node_modules
+**/TestResults
+v2rayN/v2rayN.Web/wwwroot
+v2rayN/v2rayN.Web.Client/src/i18n/generated
+v2rayN/v2rayN
+v2rayN/v2rayN.Desktop
+v2rayN/AmazTool
+v2rayN/GlobalHotKeys
+v2rayN/ServiceLib.Tests
+v2rayN/v2rayN.Web.Tests
+*.md
